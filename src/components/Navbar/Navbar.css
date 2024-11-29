@@ -1,0 +1,131 @@
+.navbar {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 14px 170px;
+}
+
+.navbar img {
+    width: 200px;
+    margin-top: -30px;
+    margin-bottom: -30px;
+    margin-left: -20px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 16px;
+}
+
+.nav-connect {
+    padding: 15px 20px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu li:hover {
+    transform: scale(1.05);
+}
+
+.active {
+    position: relative;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3.5px;
+    background: linear-gradient(90deg, #ff7e5f, #B923E1);
+    border-radius: 1px;
+    margin-top: 2px;
+}
+
+.anchor-link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-mob-close {
+    display: none;
+    width: 24px;
+    height: 24px; 
+    cursor: pointer;
+}
+
+.nav-mob-open {
+    display: none;
+    width: 20px; 
+    height: 20px; 
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        margin: 10px 20px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .navbar img {
+        width: 150px;
+        margin-top: -15px;
+        margin-bottom: -15px;
+        margin-left: 0;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding-top: 50px;
+        padding-left: 30px;
+        transition: right 0.3s ease;
+        overflow-y: auto;
+        z-index: 999; 
+    }
+
+    .nav-menu li {
+        margin-bottom: 0px;
+    }
+
+    .nav-mob-open {
+        display: block;
+        cursor: pointer;
+        margin-right: -10px;
+    }
+
+    .nav-mob-close {
+        display: block;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    .nav-connect {
+        display: none;
+    }
+}

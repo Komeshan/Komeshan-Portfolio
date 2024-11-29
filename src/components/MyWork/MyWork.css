@@ -1,0 +1,100 @@
+.mywork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin: 80px 200px;
+}
+
+.mywork-title {
+    position: relative;
+}
+
+.mywork-title h1 {
+    padding: 0px 30px;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.mywork-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    height: 50px;
+}
+
+.mywork-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+}
+
+.mywork-container img {
+    box-sizing: border-box;
+    width: 415px;
+    height: 280px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.mywork-container img:hover {
+    transform: scale(0.9);
+    border-radius: 10px;
+    transition: 0.3s;
+}   
+
+
+@media (max-width: 1024px) {
+    .mywork {
+        margin: 60px 100px; /* Adjust margins for medium-sized screens */
+    }
+
+    .mywork-title h1 {
+        font-size: 50px; /* Slightly smaller font size */
+    }
+
+    .mywork-container {
+        grid-template-columns: 1fr 1fr; /* Two columns layout */
+    }
+
+    .mywork-container img {
+        width: 300px; /* Adjust image width for medium screens */
+        height: 200px; /* Adjust image height for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .mywork {
+        margin: 40px 50px; /* Further adjust margins for smaller screens */
+    }
+
+    .mywork-title h1 {
+        font-size: 40px; /* Smaller font size */
+    }
+
+    .mywork-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .mywork-container img {
+        width: 400px; /* Adjust image width for small screens */
+        height: 200px; /* Adjust image height for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .mywork {
+        margin: 20px 20px; /* Minimal margins for very small screens */
+    }
+
+    .mywork-title h1 {
+        font-size: 30px; /* Further smaller font size */
+    }
+
+    .mywork-container img {
+        width: 500px; /* Adjust image width for very small screens */
+        height: 140px; /* Adjust image height for very small screens */
+    }
+}
